@@ -5,12 +5,13 @@ class Relatorio
   end
 
   def total
-    soma = 0.0
+    @biblioteca.livros.inject(0) {|soma_total, livro| soma_total += livro.valor.to_i}
 
-    @biblioteca.livros.each do |livro|
-      soma += livro.valor.to_i
-    end
-    soma
+  end
+
+  def titulos
+    @biblioteca.livros.map &:titulo
+
   end
 
 end
