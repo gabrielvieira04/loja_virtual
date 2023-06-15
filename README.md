@@ -1,3 +1,3 @@
 Um pequeno projeto desenvolvido utilizando a linguagem de programação Ruby.
-Esta servindo como estudo, ja que esta sendo realizado junto da leitura do livro
-"Ruby - Aprenda a programar a linguagem mais divertida" de Lucas Souza
+Se trata de uma loja virtual de livros.
+Um projeto simples que esta sendo realizado juntamente a leitura do livro "Ruby - Aprenda a Linguagem mais divertidaa"
