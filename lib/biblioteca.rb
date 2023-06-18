@@ -1,5 +1,5 @@
 class Biblioteca
-
+  attr_reader :livros
   def initialize
     @livros = {}
   end
@@ -7,15 +7,16 @@ class Biblioteca
   def adiciona(livro)
     @livros[livro.categoria] ||=[]
     @livros[livro.categoria] << livro
+
   end
 
   def livros
     @livros.values.flatten
   end
 
-  def livros_por_categoria(categoria)
+  def livros_por_categoria(categoria, &bloco)
     @livros[categoria].each do |livro|
-      yield livro
+      bloco.call livro
     end
   end
 
