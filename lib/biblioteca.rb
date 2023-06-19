@@ -16,7 +16,11 @@ class Biblioteca
 
   def livros_por_categoria(categoria, &bloco)
     @livros[categoria].each do |livro|
-      bloco.call livro
+      if block_given?
+        bloco.call livro
+      else
+        puts "Bloco não informado"
+      end
     end
   end
 
