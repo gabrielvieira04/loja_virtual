@@ -3,7 +3,7 @@ class Midia
   attr_reader :titulo
 
   def valor_com_desconto
-    p @valor-(@valor * @desconto)
+    @valor-(@valor * @desconto)
   end
 
 
