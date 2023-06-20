@@ -3,30 +3,34 @@ titulo: Ruby para idiotas
 autor: Gabriel Vieira
 isbn: '122'
 numero_de_paginas: '340'
-valor: '300'
+valor: 300
 categoria: :ruby
+desconto: 0.15
 
 --- !ruby/object:Livro
 titulo: Rails para idiotas
 autor: Gabriel Vieira
 isbn: '122'
 numero_de_paginas: '340'
-valor: '300'
+valor: 300
 categoria: :ruby
+desconto: 0.15
 
 --- !ruby/object:Livro
 titulo: Java para idiotas
 autor: Paul Deittel
 isbn: '133'
 numero_de_paginas: '500'
-valor: '500'
+valor: 500
 categoria: :java
+desconto: 0.15
 
 --- !ruby/object:Livro
 titulo: Spring para idiotas
 autor: Paul Deittel
 isbn: '133'
 numero_de_paginas: '500'
-valor: '500'
+valor: 500
 categoria: :java
+desconto: 0.15
 
