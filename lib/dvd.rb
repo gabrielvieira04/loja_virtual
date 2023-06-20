@@ -1,4 +1,3 @@
-
 class Dvd < Midia
   attr_reader :categoria
 
