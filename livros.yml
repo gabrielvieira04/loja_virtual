@@ -34,3 +34,12 @@ valor: 500
 categoria: :java
 desconto: 0.15
 
+--- !ruby/object:Livro
+titulo: Python para idiotas
+autor: Gabriel Vieira
+isbn: '1'
+numero_de_paginas: '320'
+valor: 250
+categoria: :python
+desconto: 0.15
+
