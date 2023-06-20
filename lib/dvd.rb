@@ -6,6 +6,7 @@ class Dvd < Midia
     @titulo = titulo
     @valor = valor
     @categoria = categoria
+    @desconto = 0.1
   end
 
   def to_s
