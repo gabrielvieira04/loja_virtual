@@ -43,3 +43,9 @@ valor: 250
 categoria: :python
 desconto: 0.15
 
+--- !ruby/object:Dvd
+desconto: 0.1
+titulo: Windows 7 para idiotas
+valor: 100
+categoria: :sistemas_operacionasi
+
