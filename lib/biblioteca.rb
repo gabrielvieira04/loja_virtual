@@ -9,11 +9,13 @@ class Biblioteca
   def adiciona(midia)
     salva midia do
       midias << midia
-      end if midia.kind_of? Midia
+      end
   end
 
   def midias_por_categoria(categoria)
-    midias.select { |midia| midia.categoria == categoria }
+    midias.select do |midia|
+      midia.categoria == categoria if midia.respond_to? :categoria
+    end
   end
 
   def midias
