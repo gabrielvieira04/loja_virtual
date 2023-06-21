@@ -5,4 +5,12 @@ class Revista
     @titulo = titulo
   end
 
+  def titulo
+    @titulo
+  end
+
+  def titulo_formatado
+    "Titulo: #{titulo}"
+  end
+
 end
