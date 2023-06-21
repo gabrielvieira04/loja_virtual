@@ -1,16 +1,23 @@
 class Revista
-  attr_reader :titulo
+
+  @id = 0
+
+  def self.id
+    @id += 1
+  end
 
   def initialize(titulo)
+    @id = self.class.id
     @titulo = titulo
   end
 
-  def titulo
-    @titulo
+  def id
+    @id
   end
 
-  def titulo_formatado
-    "Titulo: #{titulo}"
+  def titulo
+    titulo_upcase = @titulo.upcase
+    "Titulo: #{titulo_upcase}"
   end
 
 end
