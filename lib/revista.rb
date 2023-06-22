@@ -1,5 +1,6 @@
 class Revista
   attr_reader :titulo, :id
+  attr_accessor :valor
 
   def initialize(titulo, valor)
     @titulo = titulo
