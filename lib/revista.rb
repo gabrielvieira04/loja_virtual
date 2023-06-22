@@ -15,6 +15,10 @@ class Revista
     end
   end
 
+  def self.find(id)
+    YAML.unsafe_load File.open("db/revistas/#{id}.yml", "r")
+  end
+
   private
 
   def serialize
