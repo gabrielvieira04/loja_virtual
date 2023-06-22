@@ -1,5 +1,5 @@
 class Dvd < Midia
-  include FormatadorMoeda
+  extend FormatadorMoeda
 
   attr_reader :categoria
 
