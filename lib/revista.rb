@@ -1,23 +1,26 @@
 class Revista
+  attr_reader :titulo, :id
 
-  @id = 0
-
-  def self.id
-    @id += 1
-  end
-
-  def initialize(titulo)
-    @id = self.class.id
+  def initialize(titulo, valor)
     @titulo = titulo
+    @valor = valor
+    @id = self.class.next_id
+
   end
 
-  def id
-    @id
+  def save
+    File.open("db/revistas/#{@id}.yml", "w") do |file|
+      file.puts serialize
+    end
   end
 
-  def titulo
-    titulo_upcase = @titulo.upcase
-    "Titulo: #{titulo_upcase}"
+  private
+
+  def serialize
+    YAML.dump self
   end
 
+  def self.next_id
+    Dir.glob("db/revistas/*.yml").size + 1
+  end
 end
