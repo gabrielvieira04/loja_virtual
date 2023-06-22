@@ -1,7 +1,10 @@
-class Dvd < Midia
-  extend FormatadorMoeda
+require File.expand_path("lib/formatador_moeda")
 
+class Dvd < Midia
   attr_reader :categoria
+
+  extend FormatadorMoeda
+  formata_moeda :valor_com_desconto, :valor
 
   def initialize(titulo, valor, categoria)
     super()
