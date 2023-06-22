@@ -3,7 +3,8 @@ require File.expand_path("lib/formatador_moeda")
 class Livro < Midia
   attr_reader :autor, :categoria, :isbn
 
-  include FormatadorMoeda
+  extend FormatadorMoeda
+  formata_moeda :valor_com_desconto, :valor
 
   def initialize(titulo, autor, isbn = "1", numero_de_paginas, valor, categoria)
     @titulo = titulo
