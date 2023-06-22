@@ -1,3 +1,5 @@
+require File.expand_path("lib/loja_virtual")
+
 class Revista
   attr_reader :titulo, :id
   attr_accessor :valor
@@ -16,6 +18,10 @@ class Revista
   end
 
   def self.find(id)
+    unless File.exist?("db/revistas/#{id}.yml")
+      raise DocumentNotFound,
+            "Arquivo db/revistas/#{id} não encontrado.", caller
+    end
     YAML.unsafe_load File.open("db/revistas/#{id}.yml", "r")
   end
 
