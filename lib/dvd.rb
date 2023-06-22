@@ -1,4 +1,6 @@
 class Dvd < Midia
+  include FormatadorMoeda
+
   attr_reader :categoria
 
   def initialize(titulo, valor, categoria)
